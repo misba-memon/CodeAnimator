@@ -1,0 +1,210 @@
+/* General body and main styles remain the same */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #000000;
+}
+main {
+  display: flex;
+  flex-direction: column; /* Stacks the sections vertically */
+  align-items: center;
+  padding: 60px 20px;
+  gap: 70px; /* Space between the sorting and searching sections */
+}
+
+/* New, cleaner styles for the sections */
+.algorithm-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #18c6f6;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(0,255,255,0.3);
+  border-bottom: 2px solid #18c6f6;
+  padding-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center cards always */
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+/* Card styles remain the same */
+.algo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card {
+  width: 40vh;
+  height: 35vh;
+  background-color: white;
+  border-radius: 2rem;
+  border-color: #18c6f6;;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px #18c6f6;;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px); /* Optional: hover par card thoda upar uthega */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img { 
+  width: 45vh; 
+  height: 35vh; 
+  object-fit: cover; 
+  border-radius: 2rem; 
+}
+.label h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #181818;
+  color: #fff;
+  padding-top: 50px;
+}
+.footer-content {
+  text-align: center;
+}
+.footer-content h3 {
+  font-size: 28px;
+}
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 20px 0;
+}
+.social-links a {
+  color: #fff;
+  font-size: 22px;
+}
+.social-links a:hover {
+  color: #18c6f6;
+}
+.footer-bottom {
+  background-color: #1e1e1e;
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+.footer-bottom span {
+  color: #18c6f6;
+}
+.algo-item a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+#user-initial-display {
+  display: none; /* Initially hidden */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circle shape */
+  background-color: #007bff; /* Blue color (you can change this) */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px; /* To center the text vertically */
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: none;
+  z-index: 9999;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+  animation: fadeinout 3s ease;
+}
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+  main {
+    padding: 40px 15px;
+    gap: 50px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    gap: 20px;
+  }
+
+  .card {
+    width: 80vw; /* full width on mobile */
+    height: 50vw; /* maintain aspect ratio */
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  #easy img{
+    width:30vh;
+    height: 20vh;
+    object-fit:cover;
+  }
+
+  .label h3 {
+    font-size: 1rem;
+  }
+
+  #user-initial-display {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  .footer-content h3 {
+    font-size: 24px;
+  }
+
+  .social-links a {
+    font-size: 20px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+    padding: 10px;
+  }
+}
