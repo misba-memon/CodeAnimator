@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithms | Code Animator</title>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/algorithm.css" />
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <header>
+      <div class="box">
+        <span id="logo"> &lt;/&gt; Code Animator </span>
+        <span class="hamburger">&#9776;</span>
+        <nav>
+          <!-- Desktop Search Bar -->
+          <div class="box desktop-search">
+            <input placeholder="Search algorithm" id="search" />
+            <button>Search</button>
+          </div>
+          <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="algorithm.html" class="active">ALGORITHMS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li>
+              <a href="#" id="show-login-nav">LOGIN/REGISTER</a>
+              <div id="user-initial-display" class="user-circle"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Sliding Menu -->
+    <div class="mobile-menu">
+      <span class="close-mobile">&times;</span>
+
+      <!-- Mobile Search Bar -->
+      <div class="mobile-search">
+        <input placeholder="Search algorithm" id="mobile-search" />
+        <button>Search</button>
+      </div>
+
+      <div id="mobile-user-info" class="mobile-user-info" style="display: none;">
+        <div id="mobile-user-circle" class="user-circle"></div> 
+        <span id="mobile-user-email"></span> 
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li><a href="home.html" class="active">HOME</a></li>
+        <li><a href="algorithm.html">ALGORITHMS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li id="mobile-login-link"><a href="#">LOGIN/REGISTER</a></li>
+        <li id="logout"><a href="#">LOGOUT</a></li>
+      </ul>
+    </div>
+
+    <!-- login and registration -->
+    <div id="overlay"></div>
+    <div id="login-popup" class="popup">
+      <span class="close-btn">&times;</span>
+      <h2>Login</h2>
+      <form id="loginform" action="/login" method="POST">
+        <input id="login-email" name="email" type="email" placeholder="Enter your email" required autocomplete="email" />
+        <div style="position: relative;">
+          <input id="login-password" name="password" type="password" placeholder="Enter your password" required autocomplete="current-password" />
+          <i class="fa-solid fa-eye-slash eye-btn"></i>
+        </div>
+        <button type="submit">Login</button>
+        <p>Don't have account?
+          <a href="#" id="show-register-link">Register here</a>
+        </p>
+      </form>
+    </div>
+
+    <div id="register-popup" class="popup">
+      <span class="close-btn">&times;</span>
+      <h2>Register</h2>
+      <form id="registerform" action="/register" method="POST">
+        <input id="username" name="name" type="text" placeholder="Enter your name" required autocomplete="name" />
+        <input id="email" name="email" type="email" placeholder="Enter your email" required autocomplete="email" />
+        <div style="position: relative;">
+          <input id="password" name="password" type="password" placeholder="Create your password" required autocomplete="new-password" />
+          <i class="fa-solid fa-eye-slash eye-btn"></i>
+        </div>
+        <button type="submit">Register</button>
+        <p>Already have an account?
+          <a href="#" id="show-login-link">Login here</a>
+        </p>
+      </form>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <!-- algorithms -->
+    <main>
+      <!-- Section 1: Sorting & Searching Algorithms -->
+      <section class="algorithm-section">
+        <h2 class="section-title">Sorting & Searching Algorithms</h2>
+        <div class="card-container">
+          <!-- Bubble Sort -->
+          <div class="algo-item">
+            <div class="card" data-algo="Bubble Sort">
+              <img src="bubble.jpeg" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>Bubble Sort</h3></div>
+          </div>
+    
+          <!-- Selection Sort -->
+          <div class="algo-item">
+            <div class="card" data-algo="Selection Sort">
+              <img src="selectionsort.png" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>Selection Sort</h3></div>
+          </div>
+    
+          <!-- Insertion Sort -->
+          <div class="algo-item">
+            <div class="card" data-algo="Insertion Sort">
+              <img src="insertionsort.png" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>Insertion Sort</h3></div>
+          </div>
+  
+          <!-- Linear Search -->
+          <div class="algo-item">
+            <div class="card" data-algo="Linear Search">
+              <img src="linearsearch.png" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>Linear Search</h3></div>
+          </div>
+    
+          <!-- Binary Search -->
+          <div class="algo-item">
+            <div class="card" data-algo="Binary Search">
+              <img src="binarysearch.png" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>Binary Search</h3></div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Section 2: Other Easy Algorithms -->
+      <section class="algorithm-section" id="Easy">
+        <h2 class="section-title">Other Easy Algorithms</h2>
+        <div class="card-container">
+          <!-- Factorial -->
+          <div class="algo-item">
+            <div class="card" data-algo="Factorial">
+              <img src="factorial.png" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>Factorial</h3></div>
+          </div>
+    
+          <!-- Fibonacci -->
+          <div class="algo-item" id="Easy">
+            <div class="card" data-algo="min and max in array">
+              <img src="minmax.png" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>min and max in array</h3></div>
+          </div>
+    
+          <!-- Prime Check -->
+          <div class="algo-item" id="Easy">
+            <div class="card" data-algo="Prime Check">
+              <img src="prime.png" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>Prime Check</h3></div>
+          </div>
+    
+          <!-- Palindrome -->
+          <div class="algo-item" id="Easy">
+            <div class="card" data-algo="Palindrome">
+              <img src="palindrom.jpg" alt="Algorithm Icon" />
+            </div>
+            <div class="label"><h3>Palindrome</h3></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <h3>Code Animator</h3>
+        <p>Your go-to place for understanding complex algorithms with simple animations.</p>
+        <ul class="social-links">
+          <li><a href="#"><i class="fab fa-github"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2025 CodeAnimator. designed by <span>Misba Memon</span></p>
+      </div>
+    </footer>
+
+    <script src="js/algorithm.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>
