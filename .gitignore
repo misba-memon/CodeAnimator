@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and runtime data
+*.log
+logs/
+pids/
+*.pid
+
+# Build and test output
+coverage/
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
